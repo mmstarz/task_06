@@ -1,0 +1,26 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "test-task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "mmstar",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "cloudinary": "^1.25.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.11",
+    "sharp": "^0.28.3",
+    "yup": "^0.32.9"
+  }
+}
