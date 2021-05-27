@@ -29,7 +29,7 @@ const usersReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        error: false,        
+        error: false,
       };
     case UPD_USER:
       return {

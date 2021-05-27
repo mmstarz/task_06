@@ -189,9 +189,9 @@ const AddUserForm = ({ addUser }) => {
 
 	const renderFormFields = useCallback(() => {
 		return Object.entries(typed).map(([key, value]) => {
-			const multiline = key === "description";			
-			const label = key[0].toUpperCase() + key.slice(1);				
-			const info = `Enter ${key}`;				
+			const multiline = key === "description";
+			const label = key[0].toUpperCase() + key.slice(1);
+			const info = `Enter ${key}`;
 			const errCondition = typed[key] && errors[key] ? true : false;
 
 			return (
@@ -214,8 +214,7 @@ const AddUserForm = ({ addUser }) => {
 					onChange={customHandleChange}
 					error={errCondition}
 					helperText={errCondition ? errors[key] : info}
-					fullWidth={true}					
-
+					fullWidth={true}
 					InputProps={{
 						startAdornment: (
 							<InputAdornment position="start">
@@ -231,10 +230,7 @@ const AddUserForm = ({ addUser }) => {
 	const validCondition = changed && isValid;
 
 	return (
-		<Box
-			component="div"
-			classes={{ root: classes.add_user_form_wrapper }}
-		>
+		<Box component="div" classes={{ root: classes.add_user_form_wrapper }}>
 			<Box component="div" className="form_title">
 				<ListAltOutlinedIcon />
 				<Typography variant="body1">Fill the form</Typography>
@@ -276,5 +272,3 @@ AddUserForm.propTypes = {
 };
 
 export default connect(null, { addUser })(AddUserForm);
-
-		

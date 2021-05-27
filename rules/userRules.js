@@ -34,10 +34,10 @@ const getBase64FileSize = (base64) => {
 /*%%%=======================================%%%*/
 
 const isValidBase64 = (base64string) => {
-	try {		
-		const buffer = Buffer.from(base64string, "base64");		
+	try {
+		const buffer = Buffer.from(base64string, "base64");
 
-		const isEncoded = buffer.toString("base64") ===	base64string;
+		const isEncoded = buffer.toString("base64") === base64string;
 		console.log("isEncoded: ", isEncoded);
 
 		return isEncoded;
@@ -137,7 +137,7 @@ const addUserRule = yup.object().shape({
 	description: yup
 		.string("Description must be of type string")
 		.min(8, "Description be of minimum 8 characters length")
-		.required("Description is required"),	
+		.required("Description is required"),
 });
 
 /*%%%=======================================%%%*/
@@ -162,9 +162,9 @@ const updUserRule = yup.object().shape({
 	description: yup
 		.string("Description must be of type string")
 		.min(8, "Description should be of minimum 8 characters length")
-		.oneOf([yup.ref("description"), undefined]),	
+		.oneOf([yup.ref("description"), undefined]),
 	avatar: yup
-		.string("Picture must be of type string")		
+		.string("Picture must be of type string")
 		.test(
 			"FILE_FORMAT",
 			"Uploaded file has unsupported format",
@@ -177,7 +177,7 @@ const updUserRule = yup.object().shape({
 				!value ||
 				(value && getBase64FileSize(value) < AVAILABLE_FILE_SIZE)
 		)
-		.oneOf([yup.ref("avatar"), undefined]),		
+		.oneOf([yup.ref("avatar"), undefined]),
 });
 
 /*%%%=======================================%%%*/
@@ -212,6 +212,6 @@ const getUsersRule = yup.object().shape({
 module.exports = {
 	addUserRule,
 	updUserRule,
-	remUserRule,	
+	remUserRule,
 	getUsersRule,
 };

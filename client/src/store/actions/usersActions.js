@@ -32,11 +32,11 @@ export const addUser = (inputs) => {
 
 			// dispatch redux action
 			// dispatch({ type: ADD_USER, payload: res.data });
-			
-			// no need in payload as data will be received from getUsers
-			// based on actual pagination props			
 
-			dispatch({type: ADD_USER })
+			// no need in payload as data will be received from getUsers
+			// based on actual pagination props
+
+			dispatch({ type: ADD_USER });
 		} catch (err) {
 			// dispacth redux acton
 			dispatch({ type: ERR_USER });
@@ -94,9 +94,9 @@ export const remUser = (id) => {
 export const getUsers = (options) => {
 	return async (dispatch) => {
 		try {
-			const {skip, limit} = options;
+			const { skip, limit } = options;
 			const res = await axios.get(`/api/users/${skip}&${limit}`);
-			
+
 			dispatch({ type: GOT_CURRENT_USERS, payload: res.data });
 		} catch (err) {
 			console.log("err: ", err.message);

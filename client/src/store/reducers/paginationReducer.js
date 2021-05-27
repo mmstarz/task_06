@@ -16,9 +16,9 @@ const alertReducer = (state = initialState, action) => {
       return {
         ...state,
         users: {
-          ...payload
+          ...payload,
         },
-      };    
+      };
     default:
       return state;
   }

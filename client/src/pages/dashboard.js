@@ -228,17 +228,17 @@ const Dashboard = ({ getUsers, users, pagination, setPagination, remUser }) => {
 					</Box>
 				)}
 			</section>
-				<Pagination
-					shape="rounded"
-					variant="outlined"
-					className="pagination_root"
-					page={page}
-					count={pages}
-					onChange={handlePageChange}
-					siblingCount={0}
-					boundaryCount={1}
-				/>
-			
+			<Pagination
+				shape="rounded"
+				variant="outlined"
+				className="pagination_root"
+				page={page}
+				count={pages}
+				onChange={handlePageChange}
+				siblingCount={0}
+				boundaryCount={1}
+			/>
+
 			<CustomDialog
 				show={showDialog}
 				handleCancel={() => setDialog(false)}

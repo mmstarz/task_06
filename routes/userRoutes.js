@@ -7,17 +7,17 @@ const router = express.Router();
 
 // @route       POST api/users
 // @access      Public (no auth needed)
-// @desc        add User 
+// @desc        add User
 router.post("/", userController.addUser);
 
 // @route       PUT api/users/:id
 // @access      Public (no auth needed)
-// @desc        update User 
+// @desc        update User
 router.put("/:id", userController.updUser);
 
 // @route       DELETE api/users/:id
 // @access      Public (no auth needed)
-// @desc        remove User 
+// @desc        remove User
 router.delete("/:id", userController.remUser);
 
 // @route       GET api/users

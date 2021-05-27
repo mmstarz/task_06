@@ -95,14 +95,14 @@ const useStyles = makeStyles((theme) => ({
 						transform: "translate(-50%, -50%)",
 						"& .upload_btn": {
 							color: "#9c27b0",
-    						filter: `
+							filter: `
     							drop-shadow(0px 0px 1px #00bcd4)
     							drop-shadow(0px 0px 2px #55e0bc)
     							drop-shadow(0px 0px 3px #91dfe6)`,
 							"& svg": {
 								width: "3rem",
-								height: "3rem"
-							}
+								height: "3rem",
+							},
 						},
 					},
 				},
@@ -259,7 +259,7 @@ const UpdUserAvatarForm = ({ current, updUser }) => {
 		[handleImageURL]
 	);
 
-	// console.log("errors: ", errors);	
+	// console.log("errors: ", errors);
 
 	const errCondition = typed && errors["avatar"] ? true : false;
 	const errorMessage = errors["avatar"];
@@ -273,7 +273,7 @@ const UpdUserAvatarForm = ({ current, updUser }) => {
 					label="Upload picture"
 					className="upload_input"
 					name="avatar"
-					type="file"					
+					type="file"
 					InputProps={{
 						accept: "image/*",
 					}}

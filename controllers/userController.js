@@ -54,8 +54,7 @@ exports.addUser = async (req, res, next) => {
 /*%%%=======================================%%%*/
 
 exports.updUser = async (req, res, next) => {
-	try {	
-
+	try {
 		// inputs check
 		const inputsRes = await updUserRule.validate(
 			{
@@ -95,11 +94,11 @@ exports.updUser = async (req, res, next) => {
 /*%%%=======================================%%%*/
 
 exports.remUser = async (req, res, next) => {
-	try {		
+	try {
 		// args check
 		const argsRes = await remUserRule.validate({
 			id: req.params.id,
-		});		
+		});
 
 		// remove product doc
 		await User.findOneAndRemove({ _id: argsRes.id });
@@ -125,7 +124,7 @@ exports.remUser = async (req, res, next) => {
 /*%%%=======================================%%%*/
 
 exports.getUsers = async (req, res, next) => {
-	try {		
+	try {
 		// args check
 		const argsRes = await getUsersRule.validate(
 			{
@@ -135,7 +134,7 @@ exports.getUsers = async (req, res, next) => {
 			{ abortEarly: false }
 		);
 
-		const { skip, limit } = argsRes;		
+		const { skip, limit } = argsRes;
 
 		const data = await usersListHandler(skip, limit, User);
 

@@ -9,7 +9,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
 	add_user_root: {
 		width: "100%",
-		height: "100vh",		
+		height: "100vh",
 	},
 }));
 

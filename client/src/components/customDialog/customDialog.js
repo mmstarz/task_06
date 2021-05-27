@@ -6,9 +6,9 @@ import Dialog from "components/widgets/dialog/dialogSlide";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import Tooltip from "@material-ui/core/Tooltip";
-import IconButton from '@material-ui/core/IconButton';
+import IconButton from "@material-ui/core/IconButton";
 // mui icons
-import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
+import DeleteOutlinedIcon from "@material-ui/icons/DeleteOutlined";
 import DoneOutlinedIcon from "@material-ui/icons/DoneOutlined";
 import CloseOutlinedIcon from "@material-ui/icons/CloseOutlined";
 // styles
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 			marginLeft: theme.spacing(1),
 			fontWeight: 600,
 		},
-	},	
+	},
 	dialogActions: {
 		display: "flex",
 		alignItems: "center",
@@ -67,7 +67,7 @@ const CustomDialog = ({ show, handleCancel, handleSubmit, title, msg }) => {
 	const customHandleSubmit = useCallback(() => {
 		handleSubmit();
 		handleCancel();
-	}, [handleSubmit, handleCancel])
+	}, [handleSubmit, handleCancel]);
 
 	const dialogActions = (
 		<Box component="div" classes={{ root: classes.dialogActions }}>

@@ -11,7 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
 	edit_user_root: {
 		width: "100%",
-		height: "100vh",		
+		height: "100vh",
 	},
 	edit_user_divider: {
 		padding: 1,

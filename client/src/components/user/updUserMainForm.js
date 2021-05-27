@@ -141,7 +141,7 @@ const validationSchema = yup.object({
 	description: yup
 		.string("Description must be of type string")
 		.min(8, "Description be of minimum 8 characters length")
-		.required("Description is required"),	
+		.required("Description is required"),
 });
 
 const UpdUserForm = ({ current, updUser }) => {
@@ -261,7 +261,6 @@ const UpdUserForm = ({ current, updUser }) => {
 					helperText={errCondition ? errors[key] : info}
 					fullWidth={true}
 					disabled={!edit}
-
 					InputProps={{
 						startAdornment: (
 							<InputAdornment position="start">
